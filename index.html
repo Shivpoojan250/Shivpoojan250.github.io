@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shivpoojan Kumar | Data Analyst Portfolio</title>
+<meta name="description" content="Portfolio of Shivpoojan Kumar, a data analyst at Nokia skilled in SQL, Power BI, Python, Azure Data Factory and machine learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7fb; --card:#fff; --ink:#0f172a; --muted:#566074; --line:#e3e6ef;
+  --accent:#4338ca; --accent-soft:#e8e8fb; --on-accent:#fff; --shadow:0 8px 24px rgba(15,23,42,.08);
+  --font:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0d1020; --card:#161a2e; --ink:#eef0fa; --muted:#a3a9c0; --line:#262b45;
+    --accent:#9aa4ff; --accent-soft:#232853; --on-accent:#0d1020; --shadow:0 8px 24px rgba(0,0,0,.35)}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--font)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+
+.bar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:800;text-decoration:none}
+nav a{margin-left:22px;text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--accent)}
+@media (max-width:600px){nav a{margin-left:12px;font-size:.82rem}}
+
+.hero{padding:80px 0 56px;display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.07;letter-spacing:-.03em;font-weight:800;margin:0 0 20px}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:33em;margin:0 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:12px;font-weight:700;text-decoration:none;border:2px solid var(--line);background:var(--card);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.avatar{justify-self:center;width:min(250px,70vw);aspect-ratio:1;border-radius:32% 68% 55% 45% / 45% 40% 60% 55%;background:linear-gradient(135deg,var(--accent),#14b8a6);display:grid;place-items:center;color:#fff;font-size:4.2rem;font-weight:800;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:48px}.avatar{order:-1;width:130px;font-size:2.4rem}}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;padding-bottom:24px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:1.9rem;line-height:1.1;color:var(--accent);font-weight:800}
+.stat span{color:var(--muted);font-size:.92rem}
+
+section{padding:60px 0}
+h2{font-size:1.9rem;letter-spacing:-.02em;font-weight:800;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 34px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px;font-size:1.2rem;line-height:1.3}
+.card .sum{margin:0 0 14px;color:var(--ink)}
+.shot{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);margin:0 0 18px}
+
+.card ul.pts{margin:0 0 18px;padding-left:18px;color:var(--muted);flex:1}
+.card ul.pts li{margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--accent-soft);color:var(--accent);padding:4px 12px;border-radius:999px;font-size:.82rem;font-weight:700}
+.go{margin-top:18px;font-weight:700;color:var(--accent);text-decoration:none}
+.go:hover{text-decoration:underline}
+
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
+@media (max-width:760px){.about{grid-template-columns:1fr}}
+.about p{margin:0 0 1em;color:var(--muted)}
+.skill-group{margin-bottom:18px}
+.skill-group h3{margin:0 0 8px;font-size:1rem}
+.skills{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.skills li{background:var(--card);border:1px solid var(--line);padding:5px 13px;border-radius:10px;font-size:.92rem;font-weight:500}
+
+.timeline{border-left:3px solid var(--accent-soft);margin:0;padding:0 0 0 28px;list-style:none}
+.timeline li{position:relative;padding-bottom:30px}
+.timeline li::before{content:"";position:absolute;left:-37px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.timeline h3{margin:0;font-size:1.1rem}
+.timeline .when{color:var(--accent);font-weight:700;font-size:.9rem}
+.timeline p{margin:4px 0 0;color:var(--muted);max-width:42em}
+
+.contact{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:48px 28px;text-align:center;box-shadow:var(--shadow)}
+.contact p{color:var(--muted);max-width:30em;margin:0 auto 26px}
+.contact .btns{justify-content:center}
+footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top">Shivpoojan Kumar</a>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+  <div class="hero">
+    <div>
+      <h1>Hi, I'm <span>Shivpoojan Kumar</span>. I turn data into clear business decisions.</h1>
+      <p>Data analyst at Nokia working with SQL, Power BI, DAX, Excel and Python. I build data pipelines in Azure Data Factory, interactive dashboards and machine learning models that turn data into clear decisions.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn" href="#contact">Contact me</a>
+      </div>
+    </div>
+    <div class="avatar">SK<img src="images/profile2.jpg" alt="Photo of Shivpoojan Kumar" onerror="this.remove()"></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>Nokia</b><span>Current role: Data Analyst</span></div>
+    <div class="stat"><b>4</b><span>End-to-end analytics projects</span></div>
+    <div class="stat"><b>ADF · SQL · Power BI</b><span>Pipelines, analysis and dashboards</span></div>
+  </div>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="sub">Four projects, from raw data to dashboards and predictive models.</p>
+    <div class="grid">
+      <article class="card">
+      
+        <h3>Electric Vehicle Analysis Dashboard</h3>
+        <p class="sum">An interactive Power BI dashboard on about 150K electric vehicles, showing adoption by year, state, make, model and clean-fuel incentive eligibility.</p>
+        <ul class="pts">
+          <li>BEVs make up 78% of vehicles and PHEVs 22%, with an average electric range of 67.83 km.</li>
+          <li>Tesla leads with 69K vehicles, and Model Y (29K) and Model 3 (28K) are the top models.</li>
+          <li>About 46% of vehicles are eligible for clean alternative fuel incentives.</li>
+        </ul>
+        <ul class="chips"><li>Tableau</li><li>DAX</li><li>Excel</li></ul>
+        <!-- EDIT: add your project link -->
+        <a class="go" href="">View on GitHub</a>
+      </article>
+
+      <article class="card">
+        <h3>Telecom Customer Churn Analysis &amp; Prediction</h3>
+        <p class="sum">Analyzed telecom customer data to find who churns and why, then built models to predict it.</p>
+        <ul class="pts">
+          <li>1,869 customers churned (about 26%), putting roughly $3.7M of revenue at risk.</li>
+          <li>Month-to-month contracts churn far more, and fiber-optic customers bring 58.9% of revenue.</li>
+          <li>Logistic Regression and Random Forest models rank the top churn drivers.</li>
+        </ul>
+        <ul class="chips"><li>SQL</li><li>Power BI</li><li>DAX</li><li>Python</li><li>Machine Learning</li></ul>
+        <a class="go" href="https://github.com/Shivpoojan250">View on GitHub</a>
+      </article>
+
+      <article class="card">
+        <h3>Retail Customer Shopping Behavior Analysis</h3>
+        <p class="sum">Studied 3,900 purchase records to understand what drives spending and to segment shoppers.</p>
+        <ul class="pts">
+          <li>Subscribers spend 68% more than non-subscribers and repurchase 78% of the time.</li>
+          <li>Found a "Smart Shopper" segment: discount-driven, with above-average spend.</li>
+          <li>K-Means clustering segments customers, and Linear Regression predicts purchase amount.</li>
+        </ul>
+        <ul class="chips"><li>SQL</li><li>Power BI</li><li>Python</li><li></ul>
+        <a class="go" href="https://github.com/Shivpoojan250">View on GitHub</a>
+      </article>
+
+      <article class="card">
+        <h3>Superstore Sales &amp; Profit Analysis</h3>
+        <p class="sum">Analyzed 4,117 orders to track sales growth and find where profit is lost.</p>
+        <ul class="pts">
+          <li>$2.35M in sales and $283K in profit, with 82.3% sales growth from 2011 to 2014.</li>
+          <li>Tables lose money (-23.2% margin), and discounts correlate negatively with profit (-0.22).</li>
+          <li>A Linear Regression model predicts profit and shows the effect of discounts.</li>
+        </ul>
+        <ul class="chips"><li>Power BI</li><li>DAX</li><li>SQL</li><li>Python</li><li>Machine Learning</li></ul>
+        <a class="go" href="https://github.com/Shivpoojan250">View on GitHub</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <div>
+        <h2>About me</h2>
+        <p>I'm a data analyst at Nokia, where I extract and validate data with SQL, build Power BI dashboards and turn findings into recommendations for business teams.</p>
+        <p>Beyond reporting, I build ETL pipelines with Azure Data Factory and add machine learning (regression, classification and clustering with scikit-learn) when a prediction or segment will help the decision. I'm based in Gurugram, Haryana.</p>
+      </div>
+      <div>
+        <h2>Skills</h2>
+        <div class="skill-group"><h3>BI &amp; analysis</h3>
+          <ul class="skills"><li>Power BI</li><li>DAX</li><li>SQL</li><li>Advanced Excel</li><li>Tableau</li></ul></div>
+        <div class="skill-group"><h3>Data engineering</h3>
+          <ul class="skills"><li>Azure Data Factory</li><li>ETL pipelines</li><li>Data validation</li><li>Data modelling</li></ul></div>
+        <div class="skill-group"><h3>Python &amp; machine learning</h3>
+          <ul class="skills"><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>scikit-learn</li><li>Regression</li><li>Random Forest</li><li>K-Means</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience &amp; education</h2>
+    <p class="sub">Where I work and where I studied.</p>
+    <ul class="timeline">
+      <li><span class="when">Present</span><h3>Data Analyst, Nokia</h3>
+        <p>Extract, join and validate data from source databases with SQL for recurring reporting and ad-hoc analysis. Build and maintain Power BI dashboards with DAX measures and KPIs, use Excel for cleaning and reconciliation, and build data pipelines with Azure Data Factory. Turn findings into recommendations for business teams.</p></li>
+      <li><span class="when">2023</span><h3>B.Tech, Mechanical Engineering</h3>
+        <p>Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow.</p></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Let's talk data</h2>
+      <p>Interested in analytics, dashboards or data pipelines? Send me an email and I'll get back to you.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:mrshivpoojan51@gmail.com">Email me</a>
+        <!-- EDIT: replace with your real profile links -->
+        <a class="btn" href="https://github.com/Shivpoojan250">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/shivpoojan-kumar-985543362">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr">2026</span> Shivpoojan Kumar</footer>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+</body>
+</html>
